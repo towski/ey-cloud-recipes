@@ -30,7 +30,7 @@ directory "/data/db" do
   group node[:owner_name]
   mode 0755
   recursive true
-  not_if { File.directory?("/data/mongodb/slavedb") }
+  not_if { File.directory?("/data/db") }
 end
 
 directory "/var/run/mongodb/" do
