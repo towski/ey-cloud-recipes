@@ -46,8 +46,8 @@ execute "adduser-mongodb" do
   }
 end
 
-#execute "run-mongodb" do
-#  command %Q{
-#    /etc/init.d/mongodb start
-#  }
-#end
+execute "run-mongodb" do
+  command %Q{
+    /etc/init.d/mongodb start
+  }
+end
