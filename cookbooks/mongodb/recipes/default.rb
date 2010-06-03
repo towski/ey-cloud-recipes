@@ -25,6 +25,14 @@ directory "/db/mongodb/slavedb" do
   not_if { File.directory?("/data/mongodb/slavedb") }
 end
 
+directory "/var/run/mongodb/" do
+  owner node[:owner_name]
+  group node[:owner_name]
+  mode 0755
+  recursive true
+  not_if { File.directory?("/var/run/mongodb/") }
+end
+
 directory "/var/run/masterdb" do
   owner node[:owner_name]
   group node[:owner_name]
