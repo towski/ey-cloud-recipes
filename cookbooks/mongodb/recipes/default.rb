@@ -40,8 +40,14 @@ remote_file "/etc/init.d/mongodb" do
   mode 0755
 end
 
-execute "run-mongodb" do
+execute "adduser-mongodb" do
   command %Q{
-    /etc/init.d/mongodb start
+    adduser mongodb
   }
 end
+
+#execute "run-mongodb" do
+#  command %Q{
+#    /etc/init.d/mongodb start
+#  }
+#end
