@@ -10,7 +10,7 @@ depend() {
 MONGODB_EXEC="${MONGODB_EXEC:-/usr/local/mongodb/bin/mongod}"
 MONGODB_MASTER_DATA="${MONGODB_MASTER_DATA:-/data/mongodb/masterdb}"
 MONGODB_SLAVE_DATA="${MONGODB_SLAVE_DATA:-/data/mongodb/slavedb}"
-MONGODB_USER="${MONGODB_USER:-mongodb}"
+MONGODB_USER="${MONGODB_USER:-deploy}"
 MONGODB_MASTER_PID_FILE="${MONGODB_MASTER_PID_FILE:-/var/run/mongodb/master.pid}"
 MONGODB_SLAVE_PID_FILE="${MONGODB_SLAVE_PID_FILE:-/var/run/mongodb/slave.pid}"
 
