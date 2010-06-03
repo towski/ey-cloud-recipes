@@ -40,10 +40,10 @@ remote_file "/etc/init.d/mongodb" do
   mode 0755
 end
 
+`id mongodb`
+user_exists = $?.exitstatus == 0
 execute "adduser-mongodb" do
-  command %Q{
-    adduser mongodb
-  }
+  command "adduser mongodb" not_if { user_exists }
 end
 
 execute "run-mongodb" do
