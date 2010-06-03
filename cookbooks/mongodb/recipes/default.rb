@@ -43,7 +43,8 @@ end
 `id mongodb`
 user_exists = $?.exitstatus == 0
 execute "adduser-mongodb" do
-  command "adduser mongodb" not_if { user_exists }
+  command "adduser mongodb" 
+  not_if { user_exists }
 end
 
 execute "run-mongodb" do
